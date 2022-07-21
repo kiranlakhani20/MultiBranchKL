@@ -8,19 +8,15 @@ pipeline {
         stage('Build') {
             steps {
                snDevOpsStep ()
-                sh 'mvn -B -DskipTests clean compile'
+                echo "publish in progress"   
             }
         }
         stage('Test') { 
             steps {
                snDevOpsStep ()
-                //sh 'mvn test'
+                echo "publish in progress"   
             }
-            post {
-                always {
-                    junit 'target/surefire-reports/*.xml' 
-                }
-            }
+         
         }
     
        
