@@ -8,7 +8,7 @@ pipeline {
         stage('Build') {
             steps {
                snDevOpsStep ()
-                echo "publish in progress"   
+                echo "publish in progress!"   
             }
         }
         stage('Test') { 
